@@ -14,18 +14,7 @@ import { Post } from '../pages/post/post';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-// Import the AF2 Module
-import { AngularFireModule } from 'angularfire2';
- 
-// AF2 Settings
-export const firebaseConfig = {
-  apiKey: "AIzaSyDlasq8AraoFyOV9HbXnTAt2QwpOUA6hzU",
-    authDomain: "ideia-91d93.firebaseapp.com",
-    databaseURL: "https://ideia-91d93.firebaseio.com",
-    projectId: "ideia-91d93",
-    storageBucket: "ideia-91d93.appspot.com",
-    messagingSenderId: "571316584521"
-};
+
 const cloudSettings: CloudSettings = {
   'core': {
     'app_id': 'cd2c49d4'
@@ -45,8 +34,7 @@ const cloudSettings: CloudSettings = {
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
-    CloudModule.forRoot(cloudSettings),
-    AngularFireModule.initializeApp(firebaseConfig)
+    CloudModule.forRoot(cloudSettings)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
